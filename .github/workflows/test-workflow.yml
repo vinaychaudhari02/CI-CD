@@ -1,0 +1,18 @@
+name: Test Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+
+    env:
+      VITE_GOOGLE_PLACE_API_KEY: ${{ secrets.VITE_GOOGLE_PLACE_API_KEY }}
+      APP_ENV: ${{ vars.APP_ENV }}
+
+    steps:
+      - name: Print environment variables
+        run: |
+          echo "APP_ENV is set to: $APP_ENV"
+          echo "Using Google Places API key: $VITE_GOOGLE_PLACE_API_KEY"
