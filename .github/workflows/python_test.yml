@@ -28,5 +28,5 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest /mnt/data/test_scientific_calculator.py
-        pytest /mnt/data/my_calculator_test.py
+        pytest test_scientific_calculator.py
+        pytest my_calculator_test.py
